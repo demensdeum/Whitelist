@@ -1,6 +1,6 @@
 whitelist = ["demensdeum"]
 
-function WhitelistMessageHandler(message) {
+function WhitelistInputMessageHandler(message) {
   if (!whitelist.includes(message.contact)) {
     ContactsController.delete(message.contact);
   }
