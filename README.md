@@ -18,37 +18,17 @@ This GramEXT extension manages a "whitelisted contacts" feature for Telegram Des
 
 ## Installation  
 
-1. **Prepare GramEXT**  
-   - Install and configure **GramEXT** for your Telegram Desktop app.  
-   - Ensure JavaScript extensions are enabled.  
+1. Install GramEXT
 
-2. **Add the Script**  
-   - Save the following script in a `.js` file:  
+2. Enable whitelist extension
 
-     ```javascript
-     var whitelist = GlobalProperties["WhitelistedContacts"];
-
-     var whitelistInputMessageHandler = function(message) {  
-       if (!whitelist.includes(message.contact)) {  
-         ContactsController.delete(message.contact);  
-       }  
-     };
-     ```  
-
-3. **Configure Whitelist**  
-   - Define your whitelist in `GlobalProperties` before loading the script. For example:  
-
-     ```javascript
-     GlobalProperties["WhitelistedContacts"] = ["contact_id_1", "contact_id_2"];
-     ```  
-
-4. **Load the Script**  
-   - Use GramEXT to load the script into Telegram Desktop.  
+3. Configure whitelist extension
 
 ## Usage  
 
 - The extension automatically handles incoming messages, checking each sender against the whitelist.  
 - Contacts not on the whitelist are deleted immediately.  
+- If whitelist is empty, then all incoming messages will be deleted.
 
 ## Notes  
 
