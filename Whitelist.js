@@ -1,4 +1,4 @@
-whitelist = ["demensdeum"]
+whitelist = GlobalProperties["WhitelistedContacts"];
 
 whitelistInputMessageHandler = function(message) {
   if (!whitelist.includes(message.contact)) {
