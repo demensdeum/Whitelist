@@ -7,7 +7,8 @@
     "buildVersion" : "1.0.0",
     "license" : "MIT",
     "access" : [
-        "Input Messages"
+        "Input Messages",
+        "Contacts"
     ],
     "executables" : [
         "Whitelist.js",
