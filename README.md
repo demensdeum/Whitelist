@@ -4,17 +4,7 @@ This extension for **GramEXT**, the JavaScript extension framework for Telegram 
 
 ## Overview  
 
-This GramEXT extension manages a "whitelisted contacts" feature for Telegram Desktop. It uses the `GlobalProperties` object to store and validate the list of allowed contacts, automatically removing unapproved ones.  
-
-## How It Works  
-
-1. **Whitelist Setup**  
-   - The whitelist is stored in the `GlobalProperties["WhitelistedContacts"]` array.  
-   - Only contacts in this whitelist are retained.  
-
-2. **Message Filtering**  
-   - When a message is received, the script checks the sender's ID against the whitelist.  
-   - If the sender is not whitelisted, the contact is deleted using the `ContactsController.delete()` method.  
+This GramEXT extension manages a "whitelisted contacts" feature for Telegram Desktop. It uses the `GlobalProperties` object to store and validate the list of allowed contacts, automatically removing unapproved ones.
 
 ## Installation  
 
